@@ -1,0 +1,92 @@
+/*============ Service Features style ============*/
+.service-heading-block{
+    display:block;
+    margin-bottom:30px;
+}
+.title {
+    display: block;
+    font-size: 30px;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+.sub-title {
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 24px;
+}
+.feature-block {
+    background-color: #fff;
+    border-radius: 2px;
+    padding: 15px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    margin-bottom: 15px;
+    transition:all ease .5s
+}
+.ms-feature:hover,
+.ms-feature:focus {
+    background-color: #fafafa;
+    box-shadow: 0 3px 4px 3px rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 3px rgba(0, 0, 0, 0.12);
+}
+.fb-icon {
+    border-radius: 50%;
+    display: block;
+    font-size: 36px;
+    height: 80px;
+    line-height: 80px;
+    text-align:center;
+    margin:1rem auto;
+    width: 80px;
+    transition: all 0.5s ease 0s;
+}
+.feature-block:hover .fb-icon,
+.feature-block:focus .fb-icon {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    transform: rotate(360deg);
+}
+.fb-icon.color-info {
+    background-color: #5bc0de;
+    color: #fff;
+}
+.fb-icon.color-warning {
+    background-color: #eea236;
+    color: #fff;
+}
+.fb-icon.color-success {
+    background-color: #5cb85c;
+    color: #fff;
+}
+.fb-icon.color-danger {
+    background-color: #d9534f;
+    color: #fff;
+}
+.feature-block h4 {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 3rem 0 1rem;
+}
+.color-info {
+    color: #46b8da;
+}
+.color-warning {
+    color: #f0ad4e;
+}
+.color-success {
+    color: #4cae4c;
+}
+.color-danger {
+    color: #d43f3a;
+}
+.btn-custom{
+    border: medium none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+    margin: 10px 1px;
+    outline: 0 none;
+    padding: 8px 30px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+}

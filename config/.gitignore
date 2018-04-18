@@ -1,0 +1,4 @@
+*
+!.gitignore
+!example.ldap.php
+!example.preauth.php

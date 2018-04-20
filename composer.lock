@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "9a03a2721d530cb0bacf0ae3e1e1c8f6",
+    "content-hash": "554a2d4c9a3f89486a3b8b7171557262",
     "packages": [
         {
             "name": "adldap2/adldap2",
-            "version": "v8.1.4",
+            "version": "v8.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Adldap2/Adldap2.git",
-                "reference": "2abf3c6cd68ba4d3239fbc761dee4484dfd170d0"
+                "reference": "54722408c68f12942fcbf4a1b666d90a178ddc5c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Adldap2/Adldap2/zipball/2abf3c6cd68ba4d3239fbc761dee4484dfd170d0",
-                "reference": "2abf3c6cd68ba4d3239fbc761dee4484dfd170d0",
+                "url": "https://api.github.com/repos/Adldap2/Adldap2/zipball/54722408c68f12942fcbf4a1b666d90a178ddc5c",
+                "reference": "54722408c68f12942fcbf4a1b666d90a178ddc5c",
                 "shasum": ""
             },
             "require": {
@@ -56,7 +56,7 @@
                 "ldap",
                 "windows"
             ],
-            "time": "2018-03-29T15:42:37+00:00"
+            "time": "2018-04-19T15:06:54+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -130,7 +130,7 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "git@gitlab.dev.kominfo.go.id:donixo/darto-helm.git",
+                "url": "https://gitlab.dev.kominfo.go.id/donixo/darto-helm.git",
                 "reference": "28b169dfd4053559cdd92bfcb4505198e32c8f09"
             },
             "require": {

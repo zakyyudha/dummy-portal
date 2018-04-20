@@ -6,7 +6,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "git@gitlab.dev.kominfo.go.id:donixo/darto-helm.git"
+            "url": "https://gitlab.dev.kominfo.go.id/donixo/darto-helm.git"
         }
     ],
     "autoload": {

@@ -5,7 +5,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 use Zaky\Auth\Login;
 
-if ($_SESSION['AUTH']){
+if (@$_SESSION['AUTH']){
     \header("Location: index.php");
 }
 
@@ -43,7 +43,7 @@ if ($_POST){
             <div class="account-wall">
                 <img class="profile-img" src="./assets/images/photo.png" alt="">
                 <form class="form-signin" method="post" action="<?= $_SERVER['PHP_SELF'] ?>">
-                    <?php if ($message) : ?>
+                    <?php if (@$message) : ?>
                     <div class="alert alert-danger">
                         <strong>Oopss!</strong> username atau password salah
                     </div>

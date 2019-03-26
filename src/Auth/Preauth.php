@@ -12,20 +12,20 @@ use Zaky\Contracts\Auth\Preauth as PreauthContract;
 class Preauth implements PreauthContract
 {
     /**
-     * @param string $satelliteName
+     * @param string $sateliteName
      * @return bool
      * @throws \Exception
      */
-    public function preauthentication(string $satelliteName)
+    public function preauthentication(string $sateliteName)
     {
         $satelliteList = $this->config();
-        if(!array_key_exists($satelliteName, $satelliteList)){
+        if(!array_key_exists($sateliteName, $satelliteList)){
             echo "Error 404";
             return false;
         }
 
         $userData = $_SESSION['USER_DETAILS'];
-        $satelliteConfig = $satelliteList[$satelliteName];
+        $satelliteConfig = $satelliteList[$sateliteName];
 
         $portal = new Portal([
             'source'        => 'intranet',

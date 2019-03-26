@@ -3,6 +3,7 @@
 namespace Zaky\Auth;
 
 use Adldap\Adldap;
+use Adldap\Auth\BindException;
 use Adldap\Models\ModelNotFoundException;
 use Zaky\Contracts\Auth\Login as LoginContract;
 use Zaky\Hashing\BcryptHasher;
@@ -48,9 +49,18 @@ class Login implements LoginContract
             return false;
         }
 
-        if ($this->bcrypt->check($password, $record->getFirstAttribute('userpassword'))){
+        $dn = $record->getFirstAttribute('distinguishedname');
+        $accountInfo = [
+            'username' => $dn,
+            'password' => $password
+        ];
+
+        try{
+            $this->ldapProvider($accountInfo)->connect();
             $this->record = $record;
             return true;
+        }catch (BindException $e){
+            return false;
         }
 
         return false;
@@ -71,21 +81,34 @@ class Login implements LoginContract
         ];
     }
 
+
     /**
-     * @return $this
+     * @param $config
+     * @return Adldap
      */
-    protected function ldapProvider()
+    protected function ldapProvider($config = null)
     {
-        $config = $this->config();
+        $config = $this->config($config);
         return (new Adldap())->addProvider($config);
     }
 
     /**
+     * @param null $accountInfo
      * @return array
      */
-    protected function config() : array
+    protected function config($accountInfo = null) : array
     {
-        return include (__DIR__ . '/../../config/ldap.php');
+        $ldapConfig = include (__DIR__ . '/../../config/ldap.php');
+        if(!$accountInfo){
+            return $ldapConfig;
+        }
+        return [
+            'domain_controllers' => $ldapConfig['domain_controllers'],
+            'base_dn' => $ldapConfig['base_dn'],
+
+            'admin_username' => $accountInfo['username'],
+            'admin_password' => $accountInfo['password']
+        ];
     }
 
 
